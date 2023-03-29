@@ -3,3 +3,59 @@
     
   </mat-card>
   <p>Selected date: {{selected}}</p>
+
+  <button >Create</button>
+
+  <div class="container">
+    <p>
+      <!-- Date is: {{ localDate | date: 'dd-MM-yyyy' }} -->
+      <button (click)="showData()">Show Data in Console</button>
+  
+      <button (click)="addEvent()">Add evento</button>
+    </p>
+
+
+    
+
+
+
+  
+    <table>
+        <thead>
+          <tr>
+            <th>Horários</th>
+            <th>Eventos</th>
+          </tr>
+        </thead>
+        <tbody cdkDropListGroup style="min-width:200px;">
+          
+            <tr *ngFor="let horario of horarios">
+              <td>
+                {{ horario.horario }}
+              </td>
+              <div
+                cdkDropList
+                [cdkDropListData]="horario.eventos"
+                (cdkDropListDropped)="drop($event)"
+                class="example-list"
+              >
+                <td cdkDrag *ngFor="let evento of horario.eventos">
+                  {{ evento.nome }}
+                </td>
+              </div>
+            </tr>
+        </tbody>
+      </table>
+  </div>
+
+
+
+    <button (click)="openDialog()">Creat Event</button>
+
+        <li *ngIf="animal">
+          You chose: <em>{{animal}}</em>
+        </li>
+        <li *ngIf="name">
+            You chose: <em>{{name}}</em>
+          </li>
+  

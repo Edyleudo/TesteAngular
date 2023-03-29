@@ -1,0 +1,45 @@
+<div>
+  <label id="favorite-animal">What's the name of the event?</label>
+  <input for="favorite-animal" [(ngModel)]="data.animal" placeholder="Enter event name">
+  <p>Select the time</p>
+  <mat-form-field class="hour-new-event" appearance="fill" >
+    <mat-label>Select</mat-label>
+    <mat-select [(ngModel)]="data.name">
+      <mat-option value="Zero">00:00</mat-option>
+      <mat-option value="One">01:00</mat-option>
+      <mat-option value="Two">02:00</mat-option>
+      <mat-option value="Three">03:00</mat-option>
+      <mat-option value="Four">04:00</mat-option>
+      <mat-option value="Five">05:00</mat-option>
+      <mat-option value="Six">06:00</mat-option>
+      <mat-option value="Seven">07:00</mat-option>
+      <mat-option value="Eight">08:00</mat-option>
+      <mat-option value="Nine">09:00</mat-option>
+      <mat-option value="Ten">10:00</mat-option>
+      <mat-option value="Eleven">11:00</mat-option>
+      <mat-option value="Twelve">12:00</mat-option>
+      <mat-option value="Thirteen">13:00</mat-option>
+      <mat-option value="Fourteen">14:00</mat-option>
+      <mat-option value="Fifteen">15:00</mat-option>
+      <mat-option value="Sixteen">16:00</mat-option>
+      <mat-option value="Seventeen">17:00</mat-option>
+      <mat-option value="Eighteen">18:00</mat-option>
+      <mat-option value="Nineteen">19:00</mat-option>
+      <mat-option value="Twenty">20:00</mat-option>
+      <mat-option value="Twentyone">21:00</mat-option>
+      <mat-option value="Twentytwo">22:00</mat-option>
+      <mat-option value="Twentythree">23:00</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+</div>
+<div>
+  <button (click)="dialogRef.close(data.animal)">OK</button>
+  <button (click)="dialogRef.close()">Cancel</button>
+</div>
+
+
+<!-- Copyright 2023 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->

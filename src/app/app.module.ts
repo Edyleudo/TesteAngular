@@ -11,6 +11,23 @@ import { MatCardModule} from '@angular/material/card';
 import {MatNativeDateModule} from '@angular/material/core';
 import { CalendarComponent } from './calendar/calendar.component';
 import { GridComponent } from './grid/grid.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {DialogModule} from '@angular/cdk/dialog';
+import { DataService } from './data.service';
+import { FormsModule } from '@angular/forms';
+
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+
+import {CdkDialogOverviewExampleDialog} from './calendar/calendar.component';
+
+
+
+
+
+
+
 
 
 
@@ -18,7 +35,9 @@ import { GridComponent } from './grid/grid.component';
   declarations: [
     AppComponent,
     CalendarComponent,
-    GridComponent
+    GridComponent,
+    CdkDialogOverviewExampleDialog
+
   ],
   imports: [
     BrowserModule,
@@ -28,11 +47,19 @@ import { GridComponent } from './grid/grid.component';
     MatDatepickerModule,
     MatCardModule,
     MatNativeDateModule,
+    MatDialogModule,
+    DialogModule,
+    FormsModule,
+    MatExpansionModule,
+    MatInputModule,
+    MatSelectModule,
+    
+    
   
 
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

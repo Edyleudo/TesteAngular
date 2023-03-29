@@ -1,2 +1,10 @@
 <p class="grid-style">grid works!</p>
-<button>Create</button>
+<button >Create</button>
+
+<p>Selected date: {{ selected }}</p>
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
+  </div>
+
+
